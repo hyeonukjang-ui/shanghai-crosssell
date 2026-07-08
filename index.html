@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상하이 크로스셀 분석 · 마이리얼트립</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--primary:#2b96ed;--primary-d:#1583db;--tint:#e7f4fd;--accent:#f78000;--ink:#101418;--sub:#666d75;--line:#e9ecef;--bg:#f8f9fa;--card:#fff;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;letter-spacing:-0.01em;padding:0 0 60px}
+.top{background:var(--card);border-bottom:1px solid var(--line);padding:18px 20px}
+.top .in{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:14px}
+.top img{height:22px}
+.wrap{max-width:900px;margin:0 auto;padding:34px 16px 0}
+h1{font-size:24px;font-weight:800}
+.desc{color:var(--sub);font-size:14px;margin-top:8px;margin-bottom:26px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.cards{grid-template-columns:1fr}}
+.c{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;text-decoration:none;color:inherit;transition:.15s}
+.c:hover{border-color:var(--primary);box-shadow:0 8px 24px rgba(43,150,237,.14);transform:translateY(-2px)}
+.c .ic{font-size:30px}
+.c h2{font-size:17px;font-weight:800;margin:12px 0 6px}
+.c p{font-size:12.5px;color:var(--sub);line-height:1.7}
+.c .go{margin-top:14px;display:inline-block;font-size:12.5px;font-weight:700;color:var(--primary)}
+.c.calc:hover{border-color:var(--accent);box-shadow:0 8px 24px rgba(247,128,0,.14)}
+.c.calc .go{color:var(--accent)}
+.foot{max-width:900px;margin:30px auto 0;padding:0 16px;font-size:11.5px;color:var(--sub);line-height:1.7}
+.badge{display:inline-block;background:var(--tint);color:var(--primary-d);font-size:11.5px;font-weight:700;padding:4px 11px;border-radius:20px;margin-bottom:20px}
+</style></head><body>
+<div class="top"><div class="in">
+  <img src="https://dffoxz5he03rp.cloudfront.net/logos/logo_mrt_v2_web.svg" alt="마이리얼트립">
+  <div style="font-size:16px;font-weight:800">상하이 크로스셀 분석<small style="display:block;color:var(--sub);font-size:12px;font-weight:500;margin-top:2px">항공·숙박 → T&amp;A 크로스셀 · T&amp;A 사업실 중화권팀</small></div>
+</div></div>
+<div class="wrap">
+  <span class="badge">Redash 실측 · 최근 12개월 / 2026 1–6월 · 상하이</span>
+  <h1>상하이 크로스셀 대시보드</h1>
+  <p class="desc">항공·숙박 구매자가 30일 내 상하이 T&amp;A를 얼마나 사는지(크로스셀), 언제 사는지(타이밍), 쿠폰을 주면 손익분기가 되는지 분석한 인터랙티브 대시보드입니다.</p>
+  <div class="cards">
+    <a class="c" href="shanghai_crosssell_timing_daily.html">
+      <div class="ic">📊</div>
+      <h2>크로스셀 구매 타이밍 분석</h2>
+      <p>항공/숙박 탭 · 월별 발권·예약량 및 크로스셀 규모 · 발권→구매→여행 타이밍 · 카테고리/상품별 인사이트 · 데일리 주문 원본(검색·정렬)</p>
+      <span class="go">열기 →</span>
+    </a>
+    <a class="c calc" href="shanghai_coupon_breakeven_calculator.html">
+      <div class="ic">🧮</div>
+      <h2>쿠폰 손익분기 계산기</h2>
+      <p>항공/숙박 탭 · 쿠폰율·부담 주체(MRT·5:5·파트너)별로 몇 건을 더 팔아야 본전인지 실시간 계산 · CM율 기반 손익분기 판정</p>
+      <span class="go">열기 →</span>
+    </a>
+  </div>
+</div>
+<div class="foot">
+  크로스셀 정의 = 동일 USER_ID, 항공 발권(도착 PVG/SHA)·숙박 예약 후 30일 내 상하이 T&amp;A 구매 · CM = MART_FPNA_NONAIR_PROFIT_D 실 공헌이익<br>
+  <span style="color:#adb5bd">내부용 · Myrealtrip Design System (MDS)</span>
+</div>
+</body></html>
